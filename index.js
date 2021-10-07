@@ -5,8 +5,8 @@ const port = process.env.PORT || 3000
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-
-
+// gotenv
+require('dotenv').config()
 // import ejs
 const ejs = require('ejs');
 
@@ -19,7 +19,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.render('/index.ejs')
+    res.render('/index.ejs', { username: process.env.USERNAME })
 })
 app.get('/about', (req, res) => {
     res.render('/about.ejs')

@@ -1,3 +1,11 @@
 1. npm init 
 2. npm add .
 3. npm commit -m " text "
+
+
+
+
+
+
+npm i dotenv
+datain in dotenv werden immer groß geschrieben
