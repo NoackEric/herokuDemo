@@ -1,7 +1,6 @@
 // import express
 const express = require('express')
 const app = express()
-
 const port = process.env.PORT || 3000
 app.set('views', './views');
 app.set('view engine', 'ejs');
@@ -25,7 +24,6 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('/about.ejs')
 })
-
 app.get('/contact', (req, res) => {
     res.render('/contact.ejs')
 })
