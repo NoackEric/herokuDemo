@@ -21,7 +21,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.render('index.ejs', { name: process.env.USERNAME })
+    res.render('index.ejs')
 })
 app.get('/about', (req, res) => {
     res.render('about.ejs')
