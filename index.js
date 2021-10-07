@@ -21,7 +21,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.render('index.ejs', { superHero: process.env.SUPER })
 })
 app.get('/about', (req, res) => {
     res.render('about.ejs')
