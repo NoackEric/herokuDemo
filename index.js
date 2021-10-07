@@ -1,9 +1,11 @@
 // import express
 const express = require('express')
 const app = express()
-const port = 7000
+
+const port = process.env.PORT || 3000
+
 app.use(express.static('public'));
-app.set('views', './views')
+
 
 // import ejs
 const ejs = require('ejs');
@@ -12,13 +14,14 @@ const ejs = require('ejs');
 const axios = require('axios');
 
 
-app.get('/', (req, res) => {
-    res.render('pages/index.ejs')
-})
-app.get('/about', (req, res) => {
-    res.render('pages/about.ejs')
-})
-
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
+
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
+app.get('/about', (req, res) => {
+    res.render('about.ejs')
+})
+
