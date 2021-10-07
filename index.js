@@ -1,9 +1,9 @@
 // import express
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3010
 app.set('views', './views');
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 app.use(express.static('public'));
 // gotenv
 require('dotenv').config()
@@ -19,12 +19,12 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res) => {
-    res.render('/index.ejs', { username: process.env.USERNAME })
+    res.render('index.ejs', { username: process.env.USERNAME })
 })
 app.get('/about', (req, res) => {
-    res.render('/about.ejs')
+    res.render('about.ejs')
 })
 app.get('/contact', (req, res) => {
-    res.render('/contact.ejs')
+    res.render('contact.ejs')
 })
 
